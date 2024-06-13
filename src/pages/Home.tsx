@@ -1,5 +1,5 @@
 export const Home = () =>{
     return <>
-    homepage
+    Djur i bur page
     </>
 }

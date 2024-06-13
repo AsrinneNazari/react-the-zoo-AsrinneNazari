@@ -4,9 +4,9 @@ export interface IAnimal {
   latinName: string;
   yearOfBirth: number;
   shortDescription: string;
-  longDescription:string,
-  imgUrl:string,
-  medicine:string,
-  isFed:boolean,
-  lastFed:string
+  longDescription: string;
+  imgUrl: string;
+  medicine: string;
+  isFed: boolean;
+  lastFed: string;
 }
