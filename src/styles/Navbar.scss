@@ -2,7 +2,7 @@
   display: flex;
   background-color: rgb(58, 183, 58);
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 10px;
   font-size: 1.2rem;
   h3 {
@@ -14,5 +14,17 @@
   align-items: flex-start;
   img {
     width: 50px;
+  }
+}
+
+.navBar-left {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.navBar-right{ //hjälp?
+  a{
+    gap:10px
   }
 }
