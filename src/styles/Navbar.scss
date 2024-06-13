@@ -1,9 +1,18 @@
 .navBar {
   display: flex;
   background-color: rgb(58, 183, 58);
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  font-size: 1.2rem;
+  h3 {
+    font-size: 2rem;
+    font-family: "bebas neue";
+  }
 }
-.nav-icon{
-    img{
-    width: 10%;
-    }
+.nav-icon {
+  align-items: flex-start;
+  img {
+    width: 50px;
+  }
 }
