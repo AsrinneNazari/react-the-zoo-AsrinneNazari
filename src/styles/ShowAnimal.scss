@@ -1,21 +1,15 @@
-.animal-container {
+.test {
   display: flex;
-  width: 40%;
   flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
+}
+.animal-container {
+  width: 100%;
 }
 
 .animal-info-container {
   border: 1px solid black;
+  max-width: 35%;
   img {
-    height: 20rem;
-  }
-  button {
-    width: 5rem;
-  }
-  button:hover {
-    cursor: pointer;
+    width: 50%;
   }
 }
