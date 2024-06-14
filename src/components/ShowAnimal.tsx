@@ -19,7 +19,7 @@ export const ShowAnimal = ({ animal }: IShowAnimalProps) => {
         <p>{animal.shortDescription}</p>
         <button onClick={handleClick}>Mer info</button>
         </div>
-      </div>
+        </div>
     </>
   );
 };
