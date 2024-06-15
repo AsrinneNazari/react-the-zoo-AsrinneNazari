@@ -1,17 +1,20 @@
-.test {
-  display: flex;
-}
 .main-detail-container {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
+  align-content: center;
 }
 
 .detail-container {
-  width: 50%;
+  width: 90%;
   border: 1px solid black;
+  border-radius: 2%;
   padding: 1rem;
+  text-align: center;
   img {
+    width: 50%;
+  }
+  @media only screen and (min-width: 768px) {
     width: 50%;
   }
 }

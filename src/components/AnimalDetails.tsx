@@ -10,7 +10,6 @@ interface IShowAnimalDetailProps {
 export const AnimalDetails = ({ animal }: IShowAnimalDetailProps) => {
   return (
     <>
-
       <div className="main-detail-container">
         <div className="detail-container">
           <Link to={"/animals"}>Tillbaka</Link>
@@ -20,7 +19,7 @@ export const AnimalDetails = ({ animal }: IShowAnimalDetailProps) => {
           <p>{animal.longDescription}</p>
           <p>{animal.isFed}</p>
           <br />
-          <h5>Senast åt jag:</h5>
+          <h5>Jag åt senast:</h5>
           <p>{animal.lastFed}</p>
           <FeedAnimal />
         </div>

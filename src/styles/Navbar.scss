@@ -1,12 +1,12 @@
 .navBar {
   display: flex;
-  background-color: rgb(58, 183, 58);
   align-items: center;
+  border: 1px solid green;
   justify-content: space-between;
   gap: 10px;
   font-size: 1.2rem;
   h3 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-family: "bebas neue";
   }
 }
@@ -25,6 +25,8 @@
 
 .navBar-right{ //hjälp?
   a{
-    gap:10px
+    gap:10px;
+    text-decoration: none;
+    margin: 10px;
   }
 }

@@ -7,9 +7,11 @@ interface IAnimalProps {
 export const ShowAnimals = ({ animals }: IAnimalProps) => {
   return (
     <>
+    <div className="animal-container">
       {animals.map((animal) => {
         return <ShowAnimal key={animal.id} animal={animal}></ShowAnimal>;
       })}
+      </div>
     </>
   );
 };
