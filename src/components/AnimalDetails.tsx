@@ -12,7 +12,7 @@ export const AnimalDetails = ({ animal }: IShowAnimalDetailProps) => {
     <>
       <div className="main-detail-container">
         <div className="detail-container">
-          <Link to={"/animals"}>Tillbaka</Link>
+          <div className="link-container"><Link to={"/animals"}>Tillbaka</Link></div>
           <h3>{animal.name}</h3>
           <h4>{animal.latinName}</h4>
           <img src={animal.imageUrl} alt={animal.latinName} />
