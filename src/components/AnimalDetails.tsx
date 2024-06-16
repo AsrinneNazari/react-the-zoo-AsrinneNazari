@@ -17,11 +17,11 @@ export const AnimalDetails = ({ animal }: IShowAnimalDetailProps) => {
           <h4>{animal.latinName}</h4>
           <img src={animal.imageUrl} alt={animal.latinName} />
           <p>{animal.longDescription}</p>
-          <p>{animal.isFed}</p>
+          <p>{animal.isFed ? true : false}</p>
           <br />
-          <h5>Jag åt senast:</h5>
           <p>{animal.lastFed}</p>
-          <FeedAnimal />
+          <FeedAnimal animal={animal} />
+
         </div>
       </div>
     </>
