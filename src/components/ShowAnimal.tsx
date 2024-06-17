@@ -14,7 +14,13 @@ export const ShowAnimal = ({ animal }: IShowAnimalProps) => {
     <>
       <div className="animal-info-container">
         <h4>{animal.name}</h4>
-        <img src={animal.imageUrl} alt={animal.latinName} />
+        <img
+          src={animal.imageUrl}
+          alt={animal.latinName}
+          onError={(e) => {
+            (e.target as HTMLImageElement).src = "/public/img/hästfärs.webp";
+          }}
+        />
         <p>{animal.shortDescription}</p>
         <button onClick={handleClick}>Mer info</button>
       </div>

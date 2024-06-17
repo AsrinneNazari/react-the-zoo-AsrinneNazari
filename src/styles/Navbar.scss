@@ -1,10 +1,11 @@
 .navBar {
   display: flex;
   align-items: center;
-  border: 1px solid green;
   justify-content: space-between;
   gap: 10px;
   font-size: 1.2rem;
+  background-color: whitesmoke;
+  box-shadow: rgb(244, 242, 242) 0px 0px 1px;
   h3 {
     font-size: 2.5rem;
     font-family: "bebas neue";

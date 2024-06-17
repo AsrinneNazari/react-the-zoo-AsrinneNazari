@@ -15,3 +15,5 @@ export const ShowAnimals = ({ animals }: IAnimalProps) => {
     </>
   );
 };
+//tiden ligger inte kvar vid uppdatering av browser..
+//fixa så att knappen inte går att klicka på efter matning.

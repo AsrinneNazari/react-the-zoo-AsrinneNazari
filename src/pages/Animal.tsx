@@ -2,26 +2,32 @@ import { useEffect, useState } from "react";
 import { IAnimal } from "../models/IAnimal";
 import { AnimalDetails } from "../components/AnimalDetails";
 import { useParams } from "react-router-dom";
-import axios from "axios";
 
 export const Animal = () => {
   const { animalid } = useParams();
   const [animal, setAnimal] = useState<IAnimal>();
   const [loading, setLoading] = useState(true);
 
+
   useEffect(() => {
-    const getAnimal = async () => {
+    const getAnimal = () => {
       try {
-        const response = await axios.get<IAnimal>(
-          `https://animals.azurewebsites.net/api/animals/${animalid}`
-        );
-        setAnimal(response.data);
+        const getLocalAnimal = localStorage.getItem("animals");
+        if (getLocalAnimal) {
+          const animals: IAnimal[] = JSON.parse(getLocalAnimal);
+
+          if (animalid) {
+            const foundAnimal = animals.find((a) => a.id === +animalid);
+            setAnimal(foundAnimal);
+          }
+        }
       } catch (error) {
         console.error("Fel!", error);
       } finally {
         setLoading(false);
       }
     };
+
     getAnimal();
   }, [animalid]);
 

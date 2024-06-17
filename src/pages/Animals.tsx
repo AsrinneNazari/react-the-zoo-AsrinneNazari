@@ -10,7 +10,6 @@ export const Animals = () => {
       try {
         const animals = await getAnimals();
         setAnimalState(animals);
-        localStorage.setItem("animals", JSON.stringify(animals));
       } catch (error) {
         console.error("Fel", error);
       }
@@ -20,8 +19,10 @@ export const Animals = () => {
 
   return (
     <>
-      <h2>Djuren:</h2>
       <ShowAnimals animals={animalState}></ShowAnimals>
     </>
   );
 };
+
+//detaljsidan eller första sidan
+// på båda ställen, koll i loopen, jämföra nutid med dåtid

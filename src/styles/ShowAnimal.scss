@@ -1,8 +1,10 @@
 .animal-info-container {
-  border: 1px solid black;
   border-radius: 1%;
   width: 100%;
-  img{
+  background-color: whitesmoke;
+  box-shadow: rgb(244, 242, 242) 0px 0px 1px;
+  padding: 0.5rem;
+  img {
     width: 60%;
   }
   @media only screen and (min-width: 768px) {
