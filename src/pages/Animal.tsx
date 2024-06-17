@@ -8,7 +8,6 @@ export const Animal = () => {
   const [animal, setAnimal] = useState<IAnimal>();
   const [loading, setLoading] = useState(true);
 
-
   useEffect(() => {
     const getAnimal = () => {
       try {

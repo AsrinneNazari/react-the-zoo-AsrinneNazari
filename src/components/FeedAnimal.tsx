@@ -11,7 +11,7 @@ export const FeedAnimal = ({ animal, onFeed }: IFeedAnimalprops) => {
   const [isFed, setIsFed] = useState<boolean>(animal.isFed);
 
   const handleFeed = () => {
-    const newFeedTime = new Date().toString();
+    const newFeedTime = new Date().toLocaleString();
     const getLSanimals: IAnimal[] = JSON.parse(
       localStorage.getItem("animals") || "[]"
     );
@@ -36,10 +36,10 @@ export const FeedAnimal = ({ animal, onFeed }: IFeedAnimalprops) => {
 
   return (
     <>
-      <h5>Jag åt senast:</h5>
       <button onClick={handleFeed} disabled={isFed}>
         Mata mig!
       </button>
+      <h5>Jag åt senast:</h5>
       <p>{feed}</p>
     </>
   );
