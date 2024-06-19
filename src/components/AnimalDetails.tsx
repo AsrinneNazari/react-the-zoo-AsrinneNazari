@@ -31,7 +31,6 @@ export const AnimalDetails = ({ animal }: IShowAnimalDetailProps) => {
           />
           <p>{animal.longDescription}</p>
 
-          
           <FeedAnimal animal={currentAnimal} onFeed={newFeedUpdate} />
         </div>
       </div>
