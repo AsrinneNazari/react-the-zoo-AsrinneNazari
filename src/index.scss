@@ -13,6 +13,11 @@ button:hover {
   cursor: pointer;
 }
 
+main {
+  background-color: rgb(188, 212, 172);
+  min-height: 100vh;
+}
+
 .animal-container {
   width: 100%;
   display: flex;
@@ -28,13 +33,6 @@ button:hover {
   }
 }
 
-main {
-  background-color: rgb(188, 212, 172);
-  min-height: 100vh;
-}
-
-.homePic{
+.homePic {
   width: 100%;
 }
-
-

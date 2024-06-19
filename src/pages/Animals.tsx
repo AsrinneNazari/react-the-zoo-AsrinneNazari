@@ -6,6 +6,7 @@ import { ShowAnimals } from "../components/ShowAnimals";
 export const Animals = () => {
   const [animalState, setAnimalState] = useState<IAnimal[]>([]);
   useEffect(() => {
+    if(animalState.length >0) {return}
     const getData = async () => {
       try {
         const animals = await getAnimals();
@@ -16,6 +17,8 @@ export const Animals = () => {
     };
     getData();
   }, [animalState]);
+  localStorage.setItem("animals", JSON.stringify(animalState))
+
 
   return (
     <>
@@ -23,6 +26,3 @@ export const Animals = () => {
     </>
   );
 };
-
-//detaljsidan eller första sidan
-// på båda ställen, koll i loopen, jämföra nutid med dåtid

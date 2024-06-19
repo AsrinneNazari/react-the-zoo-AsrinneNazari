@@ -8,7 +8,7 @@ export const Navbar = () =>{
         <div className="nav-icon"><img src="/public/img/giraffe-pic.png"/></div>
         <h3>The Zoo</h3></div>
         <div className="navBar-right">
-            <NavLink to={"/home"}>Hem</NavLink>
+            <NavLink to={"/"}>Hem</NavLink>
     <NavLink to={"/animals"}>Dina Djur</NavLink>
     </div>
     </div>
