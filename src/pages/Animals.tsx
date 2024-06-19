@@ -4,9 +4,12 @@ import { getAnimals } from "../services/animalService";
 import { ShowAnimals } from "../components/ShowAnimals";
 
 export const Animals = () => {
-  const [animalState, setAnimalState] = useState<IAnimal[]>([]);
+  const LSanimalList:IAnimal[] = JSON.parse(localStorage.getItem("animals")|| "[]" ) 
+  const [animalState, setAnimalState] = useState<IAnimal[]>(LSanimalList);
   useEffect(() => {
-    if(animalState.length >0) {return}
+    if (animalState.length > 0) {
+      return;
+    }
     const getData = async () => {
       try {
         const animals = await getAnimals();
@@ -17,8 +20,7 @@ export const Animals = () => {
     };
     getData();
   }, [animalState]);
-  localStorage.setItem("animals", JSON.stringify(animalState))
-
+  localStorage.setItem("animals", JSON.stringify(animalState));
 
   return (
     <>

@@ -22,11 +22,15 @@ export const AnimalDetails = ({ animal }: IShowAnimalDetailProps) => {
           </div>
           <h3>{animal.name}</h3>
           <h4>{animal.latinName}</h4>
-          <img src={animal.imageUrl} alt={animal.latinName} onError={(e) => {
-   ( e.target as  HTMLImageElement).src="/public/img/hästfärs.webp";
-  }} />
+          <img
+            src={animal.imageUrl}
+            alt={animal.latinName}
+            onError={(e) => {
+              (e.target as HTMLImageElement).src = "/public/img/hästfärs.webp";
+            }}
+          />
           <p>{animal.longDescription}</p>
-         
+
           <br />
           <FeedAnimal animal={currentAnimal} onFeed={newFeedUpdate} />
         </div>
