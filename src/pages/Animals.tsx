@@ -4,7 +4,9 @@ import { getAnimals } from "../services/animalService";
 import { ShowAnimals } from "../components/ShowAnimals";
 
 export const Animals = () => {
-  const LSanimalList:IAnimal[] = JSON.parse(localStorage.getItem("animals")|| "[]" ) 
+  const LSanimalList: IAnimal[] = JSON.parse(
+    localStorage.getItem("animals") || "[]"
+  );
   const [animalState, setAnimalState] = useState<IAnimal[]>(LSanimalList);
   useEffect(() => {
     if (animalState.length > 0) {

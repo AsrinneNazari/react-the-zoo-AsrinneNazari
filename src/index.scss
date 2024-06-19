@@ -18,21 +18,6 @@ main {
   min-height: 100vh;
 }
 
-.animal-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  text-align: center;
-  padding: 1rem;
-
-  @media only screen and (min-width: 768px) {
-    flex-direction: row;
-  }
-}
-
 .homePic {
   width: 100%;
 }

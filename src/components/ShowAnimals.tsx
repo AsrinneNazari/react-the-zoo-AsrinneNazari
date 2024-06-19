@@ -1,5 +1,6 @@
 import { IAnimal } from "../models/IAnimal";
 import { ShowAnimal } from "./ShowAnimal";
+import "./../styles/ShowAnimals.scss"
 
 interface IAnimalProps {
   animals: IAnimal[];
